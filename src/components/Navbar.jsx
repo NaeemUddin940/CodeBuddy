@@ -120,18 +120,13 @@ const Navbar = () => {
         className="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-[#0B1120]"
         tabindex="-1"
         aria-labelledby="drawer-disable-body-scrolling-label">
-        <h5
-          id="drawer-disable-body-scrolling-label"
-          className="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">
-          Menu
-        </h5>
         <button
           type="button"
           data-drawer-hide="drawer-disable-body-scrolling"
           aria-controls="drawer-disable-body-scrolling"
-          className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+          className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute inline-flex items-center justify-center dark:text-red-500 dark:hover:bg-[#605dff] cursor-pointer dark:hover:text-red-500">
           <svg
-            className="w-3 h-3"
+            className="w-4 h-4"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -146,30 +141,29 @@ const Navbar = () => {
           </svg>
           <span className="sr-only">Close menu</span>
         </button>
-        <div className="py-4 overflow-y-auto">
+        <h5
+          id="drawer-disable-body-scrolling-label"
+          className="text-xl absolute top-2.5 end-2.5 font-bold text-gray-500 uppercase dark:text-[#605dff]">
+          MenuBar
+        </h5>
+
+        <div className="py-4 mt-5 overflow-y-auto">
           <ul className="space-y-2 font-medium">
             <li>
               <a
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-[#605dff] hover:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
-               <i class="ri-home-3-line text-2xl text-white"></i>
+                <i class="ri-home-3-line text-xl "></i>
                 <span className="ms-3">Home</span>
               </a>
             </li>
             <li>
               <button
                 type="button"
-                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-[#605dff]"
+                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group dark:hover:text-white hover:bg-gray-100 dark:text-[#605dff] dark:hover:bg-[#605dff]"
                 aria-controls="dropdown-example"
                 data-collapse-toggle="dropdown-example">
-                <svg
-                  className="shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 18 21">
-                  <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
-                </svg>
+                <i class="fa-solid fa-graduation-cap"></i>
                 <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
                   Courses
                 </span>
@@ -215,16 +209,21 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-[#605dff] dark:hover:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
                 <svg
-                  className="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 18 18">
-                  <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-5">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z"
+                  />
                 </svg>
-                <span className="flex-1 ms-3 whitespace-nowrap">Kanban</span>
+                <span className="flex-1 ms-3 whitespace-nowrap">Topics</span>
                 <span className="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
                   Pro
                 </span>
