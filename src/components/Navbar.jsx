@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <div>
-      <nav className="bg-white border-gray-200 dark:bg-[#0E1317]">
+      <nav className="bg-white border-gray-200 dark:bg-[#0B1120]">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 lg:px-5">
           {/* Sidebar Menu Icon */}
           <div className="flex space-x-3">
@@ -22,7 +22,7 @@ const Navbar = () => {
                 className="h-8"
                 alt="Flowbite Logo"
               /> */}
-              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-[#37ff00]">
+              <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-[#37ff00]">
                 CodeBuddy
               </span>
             </a>
@@ -79,7 +79,7 @@ const Navbar = () => {
                 placeholder="Search..."
               />
             </div>
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-[#0E1317] dark:border-gray-700">
+            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium text-sm border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-[#0B1120] dark:border-gray-700">
               <li>
                 <a
                   href="#"
@@ -92,14 +92,21 @@ const Navbar = () => {
                 <a
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#605dff] md:p-0 md:dark:hover:text-[#605dff] dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                  About
+                  Courses
                 </a>
               </li>
               <li>
                 <a
                   href="#"
                   className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#605dff] md:p-0 dark:text-white md:dark:hover:text-[#605dff] dark:hover:bg-gray-700 dark:hover:[#605dff] md:dark:hover:bg-transparent dark:border-gray-700">
-                  Services
+                  Topics
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#605dff] md:p-0 dark:text-white md:dark:hover:text-[#605dff] dark:hover:bg-gray-700 dark:hover:[#605dff] md:dark:hover:bg-transparent dark:border-gray-700">
+                  Projects
                 </a>
               </li>
             </ul>
@@ -107,9 +114,10 @@ const Navbar = () => {
         </div>
       </nav>
 
+      {/* Sidebar */}
       <div
         id="drawer-disable-body-scrolling"
-        className="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-gray-800"
+        className="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white w-64 dark:bg-[#0B1120]"
         tabindex="-1"
         aria-labelledby="drawer-disable-body-scrolling-label">
         <h5
@@ -143,23 +151,15 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <svg
-                  className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 21">
-                  <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
-                  <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
-                </svg>
-                <span className="ms-3">Dashboard</span>
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-[#605dff] hover:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
+               <i class="ri-home-3-line text-2xl text-white"></i>
+                <span className="ms-3">Home</span>
               </a>
             </li>
             <li>
               <button
                 type="button"
-                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-[#605dff]"
                 aria-controls="dropdown-example"
                 data-collapse-toggle="dropdown-example">
                 <svg
@@ -171,7 +171,7 @@ const Navbar = () => {
                   <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
                 </svg>
                 <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
-                  E-commerce
+                  Courses
                 </span>
                 <svg
                   className="w-3 h-3"
@@ -192,21 +192,21 @@ const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-[#605dff]">
                     Products
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-[#605dff]">
                     Billing
                   </a>
                 </li>
                 <li>
                   <a
                     href="#"
-                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                    className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-[#605dff]">
                     Invoice
                   </a>
                 </li>
@@ -215,7 +215,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
                 <svg
                   className="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
@@ -233,7 +233,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
                 <svg
                   className="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
@@ -251,7 +251,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
                 <svg
                   className="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
@@ -266,7 +266,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
                 <svg
                   className="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
@@ -281,7 +281,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
                 <svg
                   className="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
@@ -302,7 +302,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-[#605dff] group">
                 <svg
                   className="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                   aria-hidden="true"
